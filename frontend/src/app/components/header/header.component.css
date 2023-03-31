@@ -1,0 +1,17 @@
+.header-content {
+    height: 100px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.header-links {
+    display: flex;
+    width: 30%;
+    justify-content: space-around;
+}

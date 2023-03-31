@@ -1,0 +1,9 @@
+<div class="card">
+    <img src="{{ game.imageUrl }}" alt="{{ game.title }}">
+    <div class="card-body">
+      <h5 class="card-title">{{ game.title }}</h5>
+      <a [routerLink]="['/games', game._id]">
+        <button class="card-btn">View Game</button>
+      </a>
+    </div>
+</div>

@@ -1,0 +1,8 @@
+<app-header></app-header>
+
+<div class="games">
+    <app-card
+        *ngFor="let game of games"
+        [game]="game"
+    >{{ game.title }}</app-card>
+</div>
