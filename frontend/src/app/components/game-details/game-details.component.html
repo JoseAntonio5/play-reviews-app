@@ -1,5 +1,17 @@
 <app-header></app-header>
 
-<div class="game-details">
+<div class="loading" *ngIf="!game">
+    <h1>Error. Game not found.</h1>
+    <a routerLink="/games">Go back</a>
+</div>
+
+<div class="game-details" *ngIf="game">
     <h1>{{ game.title }}</h1>
+    <p><small>{{ game.genre }}</small></p>
+    <img src="{{ game.imageUrl }}" alt="{{ game.title }}">
+    <p>{{ game.description }}</p>
+
+    <a routerLink="/games">
+        <button>Go Back</button>
+    </a>
 </div>

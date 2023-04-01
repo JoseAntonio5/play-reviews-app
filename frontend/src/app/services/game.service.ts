@@ -23,8 +23,8 @@ export class GameService {
     return this.http.get<Game[]>(this.apiURL);
   }
 
-  getGameDetails(game: Game): Observable<Game> {
-    const url = `${this.apiURL}/${game._id}`;
+  getGameDetails(id: any): Observable<Game> {
+    const url = `${this.apiURL}/${id}`;
     return this.http.get<Game>(url);
   }
 

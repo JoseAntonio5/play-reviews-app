@@ -1,8 +1,14 @@
 <app-header></app-header>
 
-<div class="games">
-    <app-card
-        *ngFor="let game of games"
-        [game]="game"
-    >{{ game.title }}</app-card>
+<div class="games-content">
+    <div class="games">
+        <app-card
+            *ngFor="let game of games"
+            [game]="game"
+        >{{ game.title }}</app-card>
+    </div>
+    
+    <a routerLink="/new">
+        <button>Add New Game</button>
+    </a>
 </div>
