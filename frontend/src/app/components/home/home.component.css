@@ -1,3 +1,40 @@
 .home-text {
     text-align: center;
 }
+
+h1 {
+    margin: 10% 0 0 0;
+
+    font-size: 8rem;
+}
+
+h3 {
+    margin: 1% 0 0 0;
+
+    font-size: 2rem;
+}
+
+button {
+    width: 14rem;
+    height: 5rem;
+    margin: 2% 0 0 0;
+
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+
+    background-color: #161628;
+    color: #fff;
+
+    border: none;
+    border-radius: 14px;
+
+    cursor: pointer;
+
+    transition: 0.3s all ease-in-out;
+}
+
+button:hover {
+    background-color: #0d0d23;
+    box-shadow: 0 0 10px #0d0d23;
+}
