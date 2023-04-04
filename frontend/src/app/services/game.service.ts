@@ -23,9 +23,14 @@ export class GameService {
     return this.http.get<Game[]>(this.apiURL);
   }
 
-  getGameDetails(id: any): Observable<Game> {
+  getGameDetails(id: string | null): Observable<Game> {
     const url = `${this.apiURL}/${id}`;
     return this.http.get<Game>(url);
+  }
+
+  deleteGame(id: string | null): Observable<Game> {
+    const url = `${this.apiURL}/${id}`;
+    return this.http.delete<Game>(url);
   }
 
   addGame(game: Game) {

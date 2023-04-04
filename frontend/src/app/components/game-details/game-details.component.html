@@ -12,7 +12,10 @@
             <p><small>{{ game.genre }}</small></p>
             <img src="{{ game.imageUrl }}" alt="{{ game.title }}">
             <p>{{ game.description }}</p>
-        
+
+            <button [ngStyle]="{ 'background-color': 'green' }">Update</button>
+            <button [ngStyle]="{ 'background-color': 'red' }" (click)="onDeleteGame()">Delete</button>
+            
             <a routerLink="/games">
                 <button>Go Back</button>
             </a>

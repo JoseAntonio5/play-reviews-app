@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { GameService } from 'src/app/services/game.service';
 import { Game } from 'src/app/Game';
 
@@ -12,7 +12,21 @@ export class GameDetailsComponent {
 
   @Input() game!: Game;
 
-  constructor(private gameService: GameService, private route: ActivatedRoute) { }
+  constructor(
+    private gameService: GameService, 
+    private route: ActivatedRoute, 
+    private router: Router
+  ) { }
+
+  onDeleteGame() {
+
+    if (window.confirm("Do you really want to delete this game?")) {
+      const id = this.route.snapshot.paramMap.get('id');
+      this.gameService.deleteGame(id).subscribe(() => console.log('game deleted'))
+
+      this.router.navigate(['/games'])
+    }
+  }
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
