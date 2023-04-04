@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
+import { MatTabsModule } from '@angular/material/tabs';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -10,6 +12,8 @@ import { GamesComponent } from './components/games/games.component';
 import { CardComponent } from './components/card/card.component';
 import { GameDetailsComponent } from './components/game-details/game-details.component';
 import { AboutComponent } from './components/about/about.component';
+import { NewGameFormComponent } from './components/new-game-form/new-game-form.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -19,12 +23,16 @@ import { AboutComponent } from './components/about/about.component';
     GamesComponent,
     CardComponent,
     GameDetailsComponent,
-    AboutComponent
+    AboutComponent,
+    NewGameFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    MatTabsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

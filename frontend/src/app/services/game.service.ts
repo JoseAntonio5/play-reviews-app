@@ -28,4 +28,8 @@ export class GameService {
     return this.http.get<Game>(url);
   }
 
+  addGame(game: Game) {
+    return this.http.post<Game>(this.apiURL, game, httpOptions);
+  }
+
 }
