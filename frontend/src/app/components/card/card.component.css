@@ -6,10 +6,16 @@
     width: 18rem;
     height: 22rem;
     margin: 1rem;
+    background-color: #311c58;
     border: 1px solid #151539;
     border-radius: 15px;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-  }
+    transition: 0.2s all ease-in-out;
+}
+
+.card:hover {
+    scale: 1.1;
+}
   
 .card img {
     width: 100%;

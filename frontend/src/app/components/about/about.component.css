@@ -15,6 +15,31 @@ p {
     margin: 1% 0 0 0;
 }
 
+button {
+    width: 8rem;
+    height: 3rem;
+    margin: 2% 0 0 0;
+
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+
+    background-color: #161628;
+    color: #fff;
+
+    border: none;
+    border-radius: 14px;
+
+    cursor: pointer;
+
+    transition: 0.3s all ease-in-out;
+}
+
+button:hover {
+    background-color: #0d0d23;
+    box-shadow: 0 0 10px #0d0d23;
+}
+
 @media only screen and (max-width: 1200px) {
     
 }
