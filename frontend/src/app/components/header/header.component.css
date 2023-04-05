@@ -37,3 +37,28 @@ li:hover {
     background-color: #1a1a30;
     border-radius: 16px;
 }
+
+@media only screen and (max-width: 1200px) {
+    
+}
+
+@media only screen and (max-width: 992px) {
+    
+}
+
+@media only screen and (max-width: 768px) {
+
+}
+
+@media only screen and (max-width: 600px) {
+
+    .header-content  {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    li {
+        margin: 0 10px;
+    }
+}

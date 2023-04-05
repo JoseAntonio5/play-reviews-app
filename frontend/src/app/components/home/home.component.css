@@ -4,14 +4,16 @@
 
 h1 {
     margin: 10% 0 0 0;
-
+    
     font-size: 8rem;
+    text-shadow: 0 0 10px #000;
 }
 
 h3 {
     margin: 1% 0 0 0;
 
     font-size: 2rem;
+    text-shadow: 0 0 5px #000;
 }
 
 button {
@@ -37,4 +39,43 @@ button {
 button:hover {
     background-color: #0d0d23;
     box-shadow: 0 0 10px #0d0d23;
+}
+
+@media only screen and (max-width: 1200px) {
+    h1 {
+        font-size: 6rem;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+}
+
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 3.4rem;
+        margin: 50% 0 6% 0;
+    }
+
+    h3 {
+        font-size: 0.9rem;
+    }
+
+    button {
+        margin: 6% 0 0 0;
+    }
 }
