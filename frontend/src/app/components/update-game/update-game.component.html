@@ -1,0 +1,27 @@
+<app-header></app-header>
+<div class="new-game-form-content">
+  <div class="content-text">
+    <h1>Update: {{ game.title }}</h1>
+  </div>
+  <form>
+      <div>
+        <label for="title">Title: *</label><br>
+        <input type="text" id="title" name="title" [formControl]="updateTitle" required>
+      </div>
+      <div>
+        <label for="description">Description:</label><br>
+        <textarea id="description" name="description" [formControl]="updateDescription"></textarea>
+      </div>
+      <div>
+        <label for="genre">Genre: *</label><br>
+        <input type="text" id="genre" name="genre" [formControl]="updateGenre" required>
+      </div>
+      <div>
+        <label for="imageUrl">Image URL: *</label><br>
+        <input type="text" id="imageUrl" name="imageUrl" [formControl]="updateImageUrl">
+      </div>
+
+      <button (click)="onUpdateGame()" type="submit">Update Game</button>
+      <p>(*) required fields.</p>
+  </form>
+</div>

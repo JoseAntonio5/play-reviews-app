@@ -6,6 +6,14 @@
     align-items: center;
 }
 
+h1 {
+    transition: all 0.3s ease-in-out;
+}
+
+h1:hover {
+    text-shadow: 0 0 5px #eeeeee;
+}
+
 ul {
     list-style-type: none;
     height: 3rem;
@@ -36,6 +44,10 @@ li {
 li:hover {
     background-color: #1a1a30;
     border-radius: 16px;
+}
+
+.underline-text {
+    text-decoration: underline;
 }
 
 @media only screen and (max-width: 1200px) {

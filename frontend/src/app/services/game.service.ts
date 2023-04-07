@@ -28,13 +28,18 @@ export class GameService {
     return this.http.get<Game>(url);
   }
 
+  addGame(game: Game) {
+    return this.http.post<Game>(this.apiURL, game, httpOptions);
+  }
+
+  updateGame(game: Game): Observable<Game> {
+    const url = `${this.apiURL}/${game._id}`;
+    return this.http.put<Game>(url, game, httpOptions);
+  }
+
   deleteGame(id: string | null): Observable<Game> {
     const url = `${this.apiURL}/${id}`;
     return this.http.delete<Game>(url);
-  }
-
-  addGame(game: Game) {
-    return this.http.post<Game>(this.apiURL, game, httpOptions);
   }
 
 }

@@ -15,6 +15,7 @@ import { GameDetailsComponent } from './components/game-details/game-details.com
 import { AboutComponent } from './components/about/about.component';
 import { NewGameFormComponent } from './components/new-game-form/new-game-form.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { UpdateGameComponent } from './components/update-game/update-game.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CardComponent,
     GameDetailsComponent,
     AboutComponent,
-    NewGameFormComponent
+    NewGameFormComponent,
+    UpdateGameComponent
   ],
   imports: [
     BrowserModule,

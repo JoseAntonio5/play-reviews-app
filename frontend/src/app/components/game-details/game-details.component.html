@@ -13,7 +13,9 @@
             <img src="{{ game.imageUrl }}" alt="{{ game.title }}">
             <p>{{ game.description }}</p>
 
-            <button [ngStyle]="{ 'background-color': 'green' }">Update</button>
+            <a routerLink="/update/{{ game._id }}">
+                <button [ngStyle]="{ 'background-color': 'green' }">Update</button>
+            </a>
             <button [ngStyle]="{ 'background-color': 'red' }" (click)="onDeleteGame()">Delete</button>
             
             <a routerLink="/games">
