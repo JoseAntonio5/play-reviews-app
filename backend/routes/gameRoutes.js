@@ -20,7 +20,7 @@ router.get('/:id', async(req, res) => {
     const { id } = req.params;
 
     try {
-        const game = await Game.findById(id);
+        const game = await Game.findById(id).populate('comments');
         res.json(game);
     } catch (err) {
         console.error(err);
