@@ -4,6 +4,7 @@ const Comment = require('../models/Comment');
 
 const router = express.Router();
 
+// GET ALL COMMENTS FROM ONE GAME
 router.get('/:id/comments/', async (req, res) => {
     try {
       const game = await Game.findById(req.params.id).populate('comments');
@@ -14,6 +15,7 @@ router.get('/:id/comments/', async (req, res) => {
     }
 });
 
+// POST A NEW COMMENT TO A GAME
 router.post('/:id/comments/', async (req, res) => {
   try {
     const game = await Game.findById(req.params.id);
@@ -30,6 +32,23 @@ router.post('/:id/comments/', async (req, res) => {
     game.comments.push(newComment);
     await game.save();
     res.status(201).json(newComment);
+
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('The has been a server error.');
+  }
+});
+
+// DELETE A COMMENT
+router.delete('/comments/:id', async (req, res) => {
+  try {
+
+    const comment = await Comment.findByIdAndDelete(req.params.id);
+    res.json(
+      { 
+        message: 'Comment deleted successfully' 
+      }
+    );
 
   } catch (err) {
     console.error(err);
