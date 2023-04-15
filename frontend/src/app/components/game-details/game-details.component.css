@@ -25,3 +25,10 @@ button {
 button:hover {
     background-color: #0069d9;
 }
+
+/* comments */
+
+.game-details-comment {
+    border: 1px solid #fff;
+    margin: 2rem 0;
+}

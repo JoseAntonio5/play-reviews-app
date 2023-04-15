@@ -24,5 +24,15 @@
         </div>
     </mat-tab>
 
-    <mat-tab label="Reviews (0)"> REVIEWS GO HERE </mat-tab>
+    <div *ngIf="game">
+        <mat-tab label="Reviews ({{ game.comments?.length }})"> 
+                <div *ngFor="let comment of game.comments">
+                    <div class="game-details-comment">
+                        <h3>{{ comment.user }}</h3>
+                        <p>Rating: {{ comment.rating }}</p>
+                        <p>{{ comment.comment }}</p>
+                    </div>
+                </div>
+        </mat-tab>
+    </div>
   </mat-tab-group>
