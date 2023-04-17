@@ -32,3 +32,16 @@ button:hover {
     border: 1px solid #fff;
     margin: 2rem 0;
 }
+
+.game-details-comment {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

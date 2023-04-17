@@ -5,7 +5,7 @@
     <a routerLink="/games">Go back</a>
 </div>
 
-<mat-tab-group>
+<mat-tab-group [ngStyle]="{'color': 'white'}">
     <mat-tab label="Game Details"> 
         <div class="game-details" *ngIf="game">
             <h1>{{ game.title }}</h1>
@@ -26,12 +26,36 @@
 
     <div *ngIf="game">
         <mat-tab label="Reviews ({{ game.comments?.length }})"> 
-                <div *ngFor="let comment of game.comments">
-                    <div class="game-details-comment">
+            <div *ngFor="let comment of game.comments">
+                <div class="game-details-comment">
+                    <div class="comment-left-side">
                         <h3>{{ comment.user }}</h3>
                         <p>Rating: {{ comment.rating }}</p>
                         <p>{{ comment.comment }}</p>
                     </div>
+                    <div class="comment-right-side">
+                        <button (click)="onDeleteComment(comment._id)">Delete</button>
+                    </div>
+                </div>
+            </div>
+
+                <div class="new-comment-form">
+                    <form>
+                        <label>
+                          User:
+                          <input type="text" [formControl]="user" name="user" required>
+                        </label>
+                        <label>
+                          Rating:
+                          <input type="range" [formControl]="rating" name="rating" min="1" max="5" required>
+                          {{ rating.value }}
+                        </label>
+                        <label>
+                          Comment:
+                          <textarea [formControl]="comment" name="comment" required></textarea>
+                        </label>
+                        <button (click)="onSubmit()" type="submit">Submit</button>
+                      </form>                      
                 </div>
         </mat-tab>
     </div>
