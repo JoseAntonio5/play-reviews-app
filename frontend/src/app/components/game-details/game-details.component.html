@@ -5,32 +5,36 @@
     <a routerLink="/games">Go back</a>
 </div>
 
-<mat-tab-group [ngStyle]="{'color': 'white'}">
+<mat-tab-group id="game-details-content" [backgroundColor]="'primary'" [color]="'warn'">
     <mat-tab label="Game Details"> 
         <div class="game-details" *ngIf="game">
             <h1>{{ game.title }}</h1>
             <p><small>{{ game.genre }}</small></p>
             <img src="{{ game.imageUrl }}" alt="{{ game.title }}">
-            <p>{{ game.description }}</p>
+            <div class="game-description">
+                <p>{{ game.description }}</p>
+            </div>
 
-            <a routerLink="/update/{{ game._id }}">
-                <button [ngStyle]="{ 'background-color': 'green' }">Update</button>
-            </a>
-            <button [ngStyle]="{ 'background-color': 'red' }" (click)="onDeleteGame()">Delete</button>
-            
-            <a routerLink="/games">
-                <button>Go Back</button>
-            </a>
+            <div class="game-details-btn">
+                <a routerLink="/update/{{ game._id }}">
+                    <button [ngStyle]="{ 'background-color': 'green' }">Update</button>
+                </a>
+                <button [ngStyle]="{ 'background-color': 'red' }" (click)="onDeleteGame()">Delete</button>
+                <br>
+                <a routerLink="/games">
+                    <button>Go Back</button>
+                </a>
+            </div>
         </div>
     </mat-tab>
 
     <div *ngIf="game">
         <mat-tab label="Reviews ({{ game.comments?.length }})"> 
-            <div *ngFor="let comment of game.comments">
+            <div class="game-details-comment-content" *ngFor="let comment of game.comments">
                 <div class="game-details-comment">
                     <div class="comment-left-side">
                         <h3>{{ comment.user }}</h3>
-                        <p>Rating: {{ comment.rating }}</p>
+                        <p class="comment-rating">Rating: <b>{{ comment.rating }}</b></p>
                         <p>{{ comment.comment }}</p>
                     </div>
                     <div class="comment-right-side">
@@ -41,22 +45,19 @@
 
                 <div class="new-comment-form">
                     <form>
-                        <label>
-                          User:
-                          <input type="text" [formControl]="user" name="user" required>
-                        </label>
-                        <label>
-                          Rating:
-                          <input type="range" [formControl]="rating" name="rating" min="1" max="5" required>
-                          {{ rating.value }}
-                        </label>
-                        <label>
-                          Comment:
-                          <textarea [formControl]="comment" name="comment" required></textarea>
-                        </label>
+                        <label for="user">User:</label>
+                        <input type="text" [formControl]="user" name="user" required>
+
+                        <label for="rating">Rating:</label>
+                            <input type="range" [formControl]="rating" name="rating" min="1" max="5" required>
+                            {{ rating.value }}
+
+                        <label for="comment">Comment:</label>
+                          <textarea [formControl]="comment" name="comment" rows="5" required></textarea>
                         <button (click)="onSubmit()" type="submit">Submit</button>
                       </form>                      
                 </div>
         </mat-tab>
     </div>
   </mat-tab-group>
+  <div class="footer-space"></div>

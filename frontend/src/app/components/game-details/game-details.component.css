@@ -26,17 +26,80 @@ button:hover {
     background-color: #0069d9;
 }
 
+#game-details-content {
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 10px 12px rgba(0, 0, 0, 0.5);
+    background-color: rgba(63, 81, 181, 0.6);
+}
+
+.game-details h1 {
+    font-size: 3rem;
+    padding: 1.2rem 0 0 0;
+}
+
+.game-details img {
+    margin: 1rem 0;
+    border-radius: 30px;
+    box-shadow: 0 0 8px #000;
+
+    cursor: pointer;
+
+    transition: all .3s ease-in-out;
+}
+
+.game-details img:hover {
+    box-shadow: 0 0 14px #000;
+}
+
+.game-description {
+    margin: 0 auto;
+    width: 50%;
+    text-align: justify;
+}
+
+.game-details-btn {
+    padding: 1.2rem 0;
+}
+
+.game-details-btn button {
+    margin: 0.5rem;
+    box-shadow: 0 0 15px #000;
+}
+
+.footer-space {
+    height: 2rem;
+}
+
 /* comments */
 
-.game-details-comment {
-    border: 1px solid #fff;
-    margin: 2rem 0;
+.game-details-comment-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .game-details-comment {
+    width: 80%;
+    background-color: rgb(8 37 66 / 80%);
+    padding: 10px 30px;
+    margin: 0.6rem 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    border-radius: 14px;
+    box-shadow: 0 0 8px #000;
+}
+
+.game-details-comment h3 {
+    width: fit-content;
+    padding: 5px 10px;
+    background-color: #25405c;
+    border-radius: 12px;
+}
+
+.game-details-comment .comment-rating {
+    font-size: 1.1rem;
+    padding: 5px 0;
 }
 
 form {
@@ -44,4 +107,66 @@ form {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+form input, textarea {
+    width: 60%;
+    border: none;
+    outline: none;
+    font-size: 1.1rem;
+    padding-left: 5px;
+    border-radius: 4px;
+}
+
+form input:first-of-type {
+    height: 2rem;
+}
+
+label {
+    width: 60%;
+    text-align: start;
+    font-size: 1.4rem;
+    margin-top: 0.6rem;
+}
+
+.new-comment-form button {
+    margin: 1rem 0;
+    width: 20rem;
+    height: 3rem;
+    font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 992px) {
+    .game-details img {
+        width: 50%;
+    }
+
+    .game-details-comment {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .comment-right-side button {
+        margin: 0.8rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .game-details h1 {
+        font-size: 1.5rem;
+    }
+
+    .game-details img {
+        width: 40%;
+    }
+
+    form input, textarea, label {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
 }
