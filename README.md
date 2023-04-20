@@ -1,4 +1,4 @@
-# PlayReviews
+# PlayReviews 🎮
 
 ### About the project
 
@@ -24,3 +24,28 @@ The purpose of the app is to study the basic concepts of Angular by creating a f
 - Express
 - Rest API concepts
 - MongoDB
+
+### Run it locally
+
+1. Clone the repo
+   ```sh
+   https://github.com/JoseAntonio5/play-reviews-app.git
+   ```
+2. cd into `play-reviews\backend`
+
+3. Use `npm install` to install the dependencies
+
+4. Run `npm start` from the backend folder
+Optional: You can open `http://localhost:3000/api/games/` if you want to see some API info in your browser.
+
+5. In another terminal cd into `play-reviews\frontend`
+
+6. Use `npm install` to install the dependencies
+
+7. Run `ng serve --open`
+You browser will open the app on `http://localhost:4200/`
+
+### Screenshots
+
+#### Author
+José Antônio ©️ 2022
