@@ -13,6 +13,10 @@ The purpose of the app is to study the basic concepts of Angular by creating a f
 - Routing
 - Modules
 
+#### Functionalities
+
+The project has the functionalities of displaying a list of games, show their details page which contains a tab for the game info and a tab for the reviews of that game. It allows users to add new games to the database, as well as edit a game and delete a game. A user can also add reviews to a game, and delete a review too. There are some error handling and validation to ensure data integrity.
+
 ### Built with 🛠️
 
 ##### The project was built using some of the following technologies:
