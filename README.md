@@ -47,5 +47,16 @@ You browser will open the app on `http://localhost:4200/`
 
 ### Screenshots
 
+> Home page of PlayReviews
+![](imgs/home.png)
+> List of all games
+![](imgs/all_games.png)
+> Form page to add a new game
+![](imgs/new_game_form.png)
+> Page with some more specific game details
+![](imgs/game_details_page.png)
+> Tab with the reviews of the game
+![](imgs/reviews_tab.png)
+
 #### Author
 José Antônio ©️ 2022
