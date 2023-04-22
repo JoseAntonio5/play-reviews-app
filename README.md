@@ -63,4 +63,4 @@ You browser will open the app on `http://localhost:4200/`
 ![](imgs/reviews_tab.png)
 
 #### Author
-José Antônio ©️ 2022
+José Antônio ©️ 2023
