@@ -16,13 +16,13 @@
 button {
     width: 16rem;
     height: 5rem;
-    margin: 2% 0 0 0;
+    margin: 4% 0;
 
     font-family: Roboto, "Helvetica Neue", sans-serif;
     font-size: 1.8rem;
     font-weight: 600;
 
-    background-color: #161628;
+    background-color: #13252e;
     color: #fff;
 
     border: none;
@@ -34,6 +34,6 @@ button {
 }
 
 button:hover {
-    background-color: #0d0d23;
-    box-shadow: 0 0 10px #0d0d23;
+    background-color: #0e1e26;
+    box-shadow: 0 0 10px #13252e;
 }

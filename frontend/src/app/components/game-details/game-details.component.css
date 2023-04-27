@@ -15,7 +15,7 @@ button {
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 0.25rem;
-    background-color: #007bff;
+    background-color: #13252e;
     color: #fff;
     font-size: 1rem;
     cursor: pointer;
@@ -23,13 +23,30 @@ button {
   }
   
 button:hover {
-    background-color: #0069d9;
+    background-color: #0e1e26;
+    box-shadow: 0 0 10px #13252e;
+}
+
+.update-btn {
+    background-color: #06b7cf;
+}
+
+.update-btn:hover {
+    background-color: #0891a3;
+}
+
+.delete-btn {
+    background-color: #ab2828;
+}
+
+.delete-btn:hover {
+    background-color: #8d1919;
 }
 
 #game-details-content {
     border-radius: 0 0 20px 20px;
     box-shadow: 0 10px 12px rgba(0, 0, 0, 0.5);
-    background-color: rgba(63, 81, 181, 0.6);
+    background-color: rgb(28 63 78);
 }
 
 .game-details h1 {

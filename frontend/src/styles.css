@@ -9,7 +9,9 @@
 
 body {
     font-family: "Poppins", sans-serif;
-    background: #232044;
+    background: rgb(13,45,59);
+    background: linear-gradient(121deg, rgba(13,45,59,1) 0%, rgba(26,63,92,1) 50%, rgba(48,97,145,1) 100%);
+    background-attachment: fixed;
     color: #fff;
 }
 
@@ -23,3 +25,8 @@ a {
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-mdc-tab-group.mat-background-primary, .mat-mdc-tab-nav-bar.mat-background-primary {
+    --mat-mdc-tab-header-with-background-background-color: rgb(13,45,59);
+    --mat-mdc-tab-header-with-background-foreground-color: #fff;
+}

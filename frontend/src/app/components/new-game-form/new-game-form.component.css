@@ -22,12 +22,18 @@ input, textarea {
     margin: 1% 0;
     border: none;
     border-radius: 8px;
-    background-color: #3f3b6b;
+    background-color: #355978;
     color: #efefef;
     font-size: 1.1rem;
     padding-left: 5px;
     outline: none;
     box-shadow: 0 0 8px #191635;
+
+    transition: all 0.3s ease-in-out;
+}
+
+input:focus, textarea:focus {
+    background-color: #406c93;
 }
 
 textarea {
@@ -43,7 +49,7 @@ button {
     font-size: 1.8rem;
     font-weight: 600;
 
-    background-color: #161628;
+    background-color: #13252e;
     color: #fff;
 
     border: none;
@@ -55,8 +61,8 @@ button {
 }
 
 button:hover {
-    background-color: #0d0d23;
-    box-shadow: 0 0 10px #0d0d23;
+    background-color: #0e1e26;
+    box-shadow: 0 0 10px #13252e;
 }
 
 @media only screen and (max-width: 1200px) {

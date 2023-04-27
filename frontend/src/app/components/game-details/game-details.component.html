@@ -17,9 +17,9 @@
 
             <div class="game-details-btn">
                 <a routerLink="/update/{{ game._id }}">
-                    <button [ngStyle]="{ 'background-color': 'green' }">Update</button>
+                    <button class="update-btn">Update</button>
                 </a>
-                <button [ngStyle]="{ 'background-color': 'red' }" (click)="onDeleteGame()">Delete</button>
+                <button class="delete-btn" (click)="onDeleteGame()">Delete</button>
                 <br>
                 <a routerLink="/games">
                     <button>Go Back</button>
